@@ -11,15 +11,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="menuBar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Pertofolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>WEB Developer</p>
+                <h1>Hi, I'm <span>Luis Ferdinand</span> <br>from Indonesia</h1>  
+            </div>
+        </div>
+    </div>
+
+    <!------------- About ---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Luis Ferdinand, a dedicated web developer skilled in JavaScript, HTML, and CSS, with a passion for creating dynamic and user-friendly websites. I have experience working with various frameworks and technologies, adapting quickly to new tools and methodologies. With a strong eye for design and detail, I strive to deliver high-quality, responsive web solutions that meet and exceed client expectations. I am enthusiastic about learning and implementing new technologies to enhance the user experience and stay ahead in the rapidly evolving field of web development. I am excited about the opportunity to contribute my skills and creativity to a collaborative team environment.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links onclick=" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links onclick=" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX Design</span><br>Designing Website Interfaces</li>
+                            <li><span>Web Development</span><br>Developing Web Applications</li>
+                            <li><span>Data Analytics</span><br>Prediction and Data Modeling Presentation</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Present</span><br>Part-time Web Developer</li>
+                            <li><span>2023 - 2024</span><br>IoT Research at MBKM</li>
+                            <li><span>2022 - 2023</span><br>Internship at International Office</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024</span><br>Universitas Mercu Buana - International Class</li>
+                            <li><span>2017 - 2020</span><br>SMAN 1 Sambas</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+       
 
     
 
-    
+   
 
 
 <script>
-   
+    
+    
 </script>
 
 </body>
