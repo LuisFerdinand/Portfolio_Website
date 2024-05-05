@@ -135,7 +135,38 @@
         <a href="#" class="btn">See More</a>
     </div>
 
-   
+    <!-- -------------Contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-tittle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>ferdinandluis88@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+6285248209388</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100007003365814"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/8_fer_11/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/luis-ferdinand-11bab824a/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/LuisFerdinand"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="images/Luis Ferdinand-resume.pdf" class="btn btn2" download>Donwload CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p> <i class="fa-solid fa-user"></i>Luis Ferdinand Portofolio Website </i></p>
+    </div>
 
 
 <script>
@@ -162,6 +193,23 @@
     }
     
 </script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwm4dWImJZHnCU9rnACtmsKU381GU25xxtD29DTSLQK80e1HXmAwS1Ac_TUScjJQpTH/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(()=>{
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
